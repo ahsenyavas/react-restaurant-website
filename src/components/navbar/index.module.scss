@@ -1,0 +1,67 @@
+.container {
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  height: 100px;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  .item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    .icon {
+      background-color: rgb(231, 228, 228);
+      border-radius: 50%;
+      color: #ff4e00;
+      padding: 0.5rem;
+    }
+
+    .texts {
+      margin-left: 1.5rem;
+      color: white;
+
+      .text:first-child {
+        font-size: 0.8rem;
+      }
+      .text:last-child {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .item:nth-child(2) {
+    flex: 3;
+  }
+
+  .item:last-child{
+      justify-content: flex-end;
+  }
+  .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    .list {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      color: white;
+
+      .listItem {
+        margin: 0 2rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .badge{
+      color: white;
+  }
+}

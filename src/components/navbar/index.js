@@ -1,9 +1,43 @@
-import React from 'react'
+import Styles from "./index.module.scss";
+import Image from "next/image";
+import CallIcon from "@material-ui/icons/Call";
+import Typography from "@mui/material/Typography";
+import Badge from "@mui/material/Badge";
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 export default function Navbar() {
-    return (
-        <div>
-            Navbar
+  return (
+    <div className={Styles.container}>
+      <div className={Styles.item}>
+        <div className={Styles.icon}>
+          <CallIcon />
         </div>
-    )
+        <div className={Styles.texts}>
+          <Typography variant="h6" className={Styles.text}>
+            ORDER
+          </Typography>
+          <Typography variant="h6" className={Styles.text}>
+            213 564 789
+          </Typography>
+        </div>
+      </div>
+      <div className={Styles.center}>
+          <ul className={Styles.list}>
+              <li className={Styles.listItem}>Home</li>
+              <li className={Styles.listItem}>Products</li>
+              <Image src="/image/pizza-logo.png" alt="logo" width={40} height={40}/>
+              <li className={Styles.listItem}>Blog</li>
+              <li className={Styles.listItem}>Contact</li>
+          </ul>
+      </div>
+      <div className={Styles.item}>
+        <IconButton>
+          <Badge badgeContent={4} color="secondary" className={Styles.badge}>
+            <ShoppingCartIcon />
+          </Badge>
+        </IconButton>
+      </div>
+    </div>
+  );
 }

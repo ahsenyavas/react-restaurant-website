@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
+import ProductList from "../src/components/product-list";
+import Slider from "../src/components/slider";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -8,12 +9,11 @@ export default function Home() {
       <Head>
         <title>Pizza Restaurant</title>
         <meta name="description" content="restaurant" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/image/pizza-logo.png" />
       </Head>
      
-      homepage
-      <Image src="/image/pizza-logo.png" alt="logo" width={30} height={30}/>
-     
+      <Slider />
+     <ProductList />
     </div>
   );
 }

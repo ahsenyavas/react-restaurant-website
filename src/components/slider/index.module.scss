@@ -1,0 +1,42 @@
+.container {
+  height: calc(100vh - 100px);
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  overflow: hidden;
+  position: relative;
+  //display: flex;
+  .arrow {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    color: white;
+    margin: 0 1rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .wrapper {
+    width: 300vh;
+    height: 100%;
+    display: flex;
+    .imageContainer {
+      width: 100vh;
+      height: 100%;
+      //position: relative;
+      display: flex;
+      align-items: center;
+      p{
+        margin-right: 3rem;
+      }
+      .slide{
+        opacity: 0;
+        transition-duration: 1s ease;
+      }
+
+      .slideActive{
+        opacity: 1;
+        transition-duration: 1s;
+        transform: all 1.5s ease-in-out;
+      }
+    }
+  }
+}
