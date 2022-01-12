@@ -1,0 +1,45 @@
+$color-yellow: #faaa09;
+$color-orange: #ff4e00;
+
+.container {
+  height: calc(100vh-100px);
+  background-color: rgba(167, 164, 164, 0.712);
+  display: flex;
+  color: white;
+  
+
+  .image{
+    flex: 1;
+    img{
+      height: 100%;
+    }
+   
+  }
+
+  .item {
+    flex: 3;
+    //position: relative;
+    display: flex;
+    margin-top: 1.5rem;
+
+    .card{
+      flex: 1;
+      p{
+        color: $color-orange;
+      }
+      .best{
+        margin: 0 0 1rem 3rem; 
+        color: $color-yellow;
+      }
+      .title{
+        margin: 0 0 1rem 3rem;
+        color: $color-orange;
+        
+      }
+
+      .head{
+        color: $color-yellow;
+      }
+    }
+  }
+}

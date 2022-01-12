@@ -8,14 +8,15 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export default function Card() {
-  const [pizzaData, setPizzaData] = useState(null);
-  useEffect(() => {
-    fetch(
-      "https://private-anon-bba396c7a0-pizzaapp.apiary-mock.com/restaurants/"
-    )
-      .then((response) => response.json())
-      .then((data) => setPizzaData(data));
-  }, []);
+
+  // const [pizzaData, setPizzaData] = useState(null);
+  // useEffect(() => {
+  //   fetch(
+  //     "https://private-anon-bba396c7a0-pizzaapp.apiary-mock.com/restaurants/"
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => setPizzaData(data));
+  // }, []);
 
   return (
     <div className={Styles.container}>
@@ -28,7 +29,8 @@ export default function Card() {
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
-            {pizzaData[0].name}
+            {/* {pizzaData[0].name} */}
+            PIZZA FIORI
           </Typography>
           <Typography
             variant="body2"
@@ -43,8 +45,7 @@ export default function Card() {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Share</Button>
-          <Button size="small">Learn More</Button>
+          <Button size="small">ADD</Button>
         </CardActions>
       </CardUI>
     </div>
