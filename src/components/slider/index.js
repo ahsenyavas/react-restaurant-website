@@ -8,13 +8,16 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function Slider() {
   const sliderData = [
     {
-      image: "/image/pizza1.png",
+      image:
+        " https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
     {
-      image: "/image/pizza-logo.png",
+      image:
+        "https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
     {
-      image: "/image/pizza1.png",
+      image:
+        "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     },
   ];
 
@@ -38,7 +41,7 @@ export default function Slider() {
       <div style={{ left: 0 }} onClick={() => handleArrow("left")}>
         <ArrowBackIosIcon className={Styles.arrow} />
       </div>
-      <div className={Styles.imageContainer} >
+      <div className={Styles.imageContainer}>
         {sliderData.map((slide, index) => {
           return (
             <div className={Styles.wrapper} key={index}>
@@ -48,7 +51,14 @@ export default function Slider() {
                   slide: index !== current,
                 })}
               >
-                {index === current && <Image src={slide.image} alt="pizza" layout="fill" objectFit="contain" />}
+                {index === current && (
+                  <Image
+                    src={slide.image}
+                    alt="pizza"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                )}
               </div>
             </div>
           );

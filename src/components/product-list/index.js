@@ -2,7 +2,7 @@ import Styles from "./index.module.scss";
 import Card from "../card";
 import Typography from "@mui/material/Typography";
 
-export default function ProductList() {
+export default function ProductList({products}) {
   return (
     <div className={Styles.container}>
       <Typography variant="h4" className={Styles.title}>THE BEST PIZZA</Typography>
@@ -15,6 +15,10 @@ export default function ProductList() {
         essentially unchanged.
       </Typography>
       <div className={Styles.wrapper}>
+        {/* {products.map((product)=>{
+          <Card key={product.id} product={product}/>
+          console.log(product.name);
+        })} */}
           <Card />
           <Card />
           <Card />

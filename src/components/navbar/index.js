@@ -7,6 +7,7 @@ import Badge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import NextLink from "next/link";
+import { pizzaDatas } from "../../../utils/pizzaDatas";
 
 export default function Navbar() {
   return (
@@ -28,54 +29,48 @@ export default function Navbar() {
         <ul className={Styles.list}>
           <li className={Styles.listItem}>
             <NextLink href="/" passHref>
-            <Link
-                variant="inherit"
-                underline="hover"
-                sx={{ color: "white" }}
-              >Home
+              <Link variant="inherit" underline="hover" sx={{ color: "white" }}>
+                Home
               </Link>
-              </NextLink>
+            </NextLink>
           </li>
           <li className={Styles.listItem}>
-          <NextLink href="/" passHref>
-            <Link
-                variant="inherit"
-                underline="hover"
-                sx={{ color: "white" }}
-              >Products
+            <NextLink href="/" passHref>
+              <Link variant="inherit" underline="hover" sx={{ color: "white" }}>
+                Products
               </Link>
-              </NextLink>
-            </li>
+            </NextLink>
+          </li>
           <Image
             src="/image/pizza-logo.png"
             alt="logo"
             width={40}
             height={40}
           />
-          <li className={Styles.listItem}><NextLink href="/" passHref>
-            <Link
-                variant="inherit"
-                underline="hover"
-                sx={{ color: "white" }}
-              >Blog
+          <li className={Styles.listItem}>
+            <NextLink href="/" passHref>
+              <Link variant="inherit" underline="hover" sx={{ color: "white" }}>
+                Blog
               </Link>
-              </NextLink></li>
-          <li className={Styles.listItem}><NextLink href="/" passHref>
-            <Link
-                variant="inherit"
-                underline="hover"
-                sx={{ color: "white" }}
-              >Contact
+            </NextLink>
+          </li>
+          <li className={Styles.listItem}>
+            <NextLink href="/" passHref>
+              <Link variant="inherit" underline="hover" sx={{ color: "white" }}>
+                Contact
               </Link>
-              </NextLink></li>
+            </NextLink>
+          </li>
         </ul>
       </div>
       <div className={Styles.item}>
+      <NextLink href={`/product/${pizzaDatas.id}`} passHref>
         <IconButton>
           <Badge badgeContent={4} color="secondary" className={Styles.badge}>
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
+        </NextLink>
       </div>
     </div>
   );

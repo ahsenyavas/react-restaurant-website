@@ -6,20 +6,22 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import TextField from "@mui/material/TextField";
+import NextLink from "next/link";
 
 export default function Product() {
+  const { products } = pizzaDatas;
   return (
     <div className={Styles.container}>
       <Paper elevation={3} className={Styles.paper}>
         <div className={Styles.left}>
           <div className={Styles.image}>
-            <img src={pizzaDatas.img} />
+            <img src={products[0].img} />
           </div>
         </div>
         <div className={Styles.right}>
           <h1>{pizzaDatas.name}</h1>
-          <span className={Styles.price}>${pizzaDatas.price[0]}</span>
-          <p className={Styles.desc}>{pizzaDatas.desc}</p>
+          <span className={Styles.price}>${products[0].price}</span>
+          <p className={Styles.desc}>{products[0].desc}</p>
           <p className={Styles.ing}>Choose Ingredients:</p>
           <FormGroup className={Styles.checkbox}>
             <FormControlLabel
@@ -42,9 +44,14 @@ export default function Product() {
               size="small"
               sx={{ width: "4rem" }}
             ></TextField>
-            <Button variant="contained" sx={{ bgcolor: "#ec9f05" }}>
-              Add
-            </Button>
+            <NextLink href="/cart">
+              <Button
+                variant="contained"
+                style={{ backgroundColor: "#ec9f05" }}
+              >
+                Add to Cart
+              </Button>
+            </NextLink>
           </div>
         </div>
       </Paper>

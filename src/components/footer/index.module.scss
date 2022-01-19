@@ -3,7 +3,7 @@ $color-orange: #ff4e00;
 
 .container {
   height: calc(100vh-100px);
-  background-color: rgba(167, 164, 164, 0.712);
+  background-color: rgba(197, 193, 193, 0.712);
   display: flex;
   color: white;
   
@@ -41,5 +41,27 @@ $color-orange: #ff4e00;
         color: $color-yellow;
       }
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: auto;
+    text-align: center;
+  }
+  .image{
+    display: none;
+  }
+
+  .item {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 20px;
   }
 }

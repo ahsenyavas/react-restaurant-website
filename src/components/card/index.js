@@ -20,12 +20,13 @@ export default function Card() {
 
   return (
     <div className={Styles.container}>
-      <CardUI>
+      <CardUI  className={Styles.card}>
         <CardMedia
           component="img"
           alt="pizza"
           height="300"
           image="/image/pizza1.png"
+         
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
@@ -48,6 +49,7 @@ export default function Card() {
           <Button size="small">ADD</Button>
         </CardActions>
       </CardUI>
+      
     </div>
   );
 }

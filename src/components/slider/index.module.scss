@@ -35,15 +35,14 @@
     .imageContainer {
       display: flex;
       //justify-content: space-between;
-      width: 100vh;
+      width: 100%;
       height: 100%;
       position: relative;
       //align-items: center;
 
-      .texts{
+      .texts {
         display: flex;
         margin: 5rem;
-        
       }
       .slide {
         opacity: 0;
@@ -56,5 +55,11 @@
         transform: all 1.5s ease-in-out;
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    height: 50vh;
   }
 }
