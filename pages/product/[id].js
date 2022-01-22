@@ -15,13 +15,13 @@ export default function Product() {
       <Paper elevation={3} className={Styles.paper}>
         <div className={Styles.left}>
           <div className={Styles.image}>
-            <img src={pizzaDatas.img} />
+            <img src={pizzaDatas[0].img} />
           </div>
         </div>
         <div className={Styles.right}>
           <h1>{pizzaDatas.name}</h1>
-          <span className={Styles.price}>${pizzaDatas.price}</span>
-          <p className={Styles.desc}>{pizzaDatas.desc}</p>
+          <span className={Styles.price}>${pizzaDatas[0].price}</span>
+          <p className={Styles.desc}>{pizzaDatas[0].desc}</p>
           <p className={Styles.ing}>Choose Ingredients:</p>
           <FormGroup className={Styles.checkbox}>
             <FormControlLabel

@@ -14,8 +14,7 @@ import { PizzaContext } from "../../../pages/_app";
 export default function Navbar() {
   const context = useContext(PizzaContext);
 
-  const totalCartCount = context.state.cart.reduce(
-    (total, pizza) => (total = total + pizza.count), 0);
+ 
   
   return (
     <div className={Styles.container}>
@@ -74,7 +73,7 @@ export default function Navbar() {
       {/* href={`/product/${pizzaDatas.id}`} */}
       <NextLink href={"/cart"} passHref>
         <IconButton>
-          <Badge badgeContent={totalCartCount} color="secondary" className={Styles.badge}>
+          <Badge badgeContent={2} color="secondary" className={Styles.badge}>
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
