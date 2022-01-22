@@ -3,8 +3,9 @@
 #### The purpose of this project is to practice React, Next.js, Material UI and responsive design.
 
 ![](images/image1.png)
-![](images/image2.png)
+<br />
 ![](images/image3.png)
+![](images/image2.png)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
