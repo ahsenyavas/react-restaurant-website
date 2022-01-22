@@ -20,13 +20,7 @@ export default function ProductList({products}) {
           console.log(product.name);
         })} */}
           <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          
       </div>
     </div>
   );

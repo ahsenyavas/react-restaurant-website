@@ -55,3 +55,18 @@
     }
   }
 }
+
+@media screen and (max-width: 992px){
+  .paper{
+    display: flex;
+    flex-direction: column;
+    width: 25rem !important;
+    height:auto !important;
+
+    .right{
+      .desc{
+        width: auto;
+      }
+    }
+  }
+}

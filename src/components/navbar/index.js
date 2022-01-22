@@ -7,9 +7,16 @@ import Badge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import NextLink from "next/link";
-import { pizzaDatas } from "../../../utils/pizzaDatas";
+import { useContext } from "react";
+import { PizzaContext } from "../../../pages/_app";
+
 
 export default function Navbar() {
+  const context = useContext(PizzaContext);
+
+  const totalCartCount = context.state.cart.reduce(
+    (total, pizza) => (total = total + pizza.count), 0);
+  
   return (
     <div className={Styles.container}>
       <div className={Styles.item}>
@@ -64,9 +71,10 @@ export default function Navbar() {
         </ul>
       </div>
       <div className={Styles.item}>
-      <NextLink href={`/product/${pizzaDatas.id}`} passHref>
+      {/* href={`/product/${pizzaDatas.id}`} */}
+      <NextLink href={"/cart"} passHref>
         <IconButton>
-          <Badge badgeContent={4} color="secondary" className={Styles.badge}>
+          <Badge badgeContent={totalCartCount} color="secondary" className={Styles.badge}>
             <ShoppingCartIcon />
           </Badge>
         </IconButton>

@@ -9,19 +9,19 @@ import TextField from "@mui/material/TextField";
 import NextLink from "next/link";
 
 export default function Product() {
-  const { products } = pizzaDatas;
+ 
   return (
     <div className={Styles.container}>
       <Paper elevation={3} className={Styles.paper}>
         <div className={Styles.left}>
           <div className={Styles.image}>
-            <img src={products[0].img} />
+            <img src={pizzaDatas.img} />
           </div>
         </div>
         <div className={Styles.right}>
           <h1>{pizzaDatas.name}</h1>
-          <span className={Styles.price}>${products[0].price}</span>
-          <p className={Styles.desc}>{products[0].desc}</p>
+          <span className={Styles.price}>${pizzaDatas.price}</span>
+          <p className={Styles.desc}>{pizzaDatas.desc}</p>
           <p className={Styles.ing}>Choose Ingredients:</p>
           <FormGroup className={Styles.checkbox}>
             <FormControlLabel

@@ -9,18 +9,20 @@
 
   .paper {
     display: flex;
-    align-items: center;
+    //align-items: center;
     justify-content: center;
     width: 70em;
     height: 25rem;
-    padding: 2rem;
+    padding: 6rem 2rem;
     margin: 2rem;
     //position: relative;
-
+    
+   
     .column {
       display: flex;
       flex-direction: column;
       align-items: center;
+     
       margin: 0 1.5rem;
     }
 
@@ -36,3 +38,23 @@
     }
   }
 }
+
+
+@media screen and (max-width: 992px) {
+  .paper {
+    display: flex;
+    flex-direction: column;
+    //flex-wrap: wrap !important;
+    text-align: center;
+    align-items: center;
+    width: 25rem !important;
+    height: auto !important;
+
+    .total {
+      margin-left: 0 !important;
+    }
+  }
+}
+
+
+ 

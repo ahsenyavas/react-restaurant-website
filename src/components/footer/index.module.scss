@@ -6,14 +6,12 @@ $color-orange: #ff4e00;
   background-color: rgba(197, 193, 193, 0.712);
   display: flex;
   color: white;
-  
 
-  .image{
+  .image {
     flex: 1;
-    img{
+    img {
       height: 100%;
     }
-   
   }
 
   .item {
@@ -22,46 +20,44 @@ $color-orange: #ff4e00;
     display: flex;
     margin-top: 1.5rem;
 
-    .card{
+    .card {
       flex: 1;
-      p{
+      p {
         color: $color-orange;
       }
-      .best{
-        margin: 0 0 1rem 3rem; 
+      .best {
+        margin: 0 0 1rem 3rem;
         color: $color-yellow;
       }
-      .title{
+      .title {
         margin: 0 0 1rem 3rem;
         color: $color-orange;
-        
       }
 
-      .head{
+      .head {
         color: $color-yellow;
       }
     }
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 992px) {
   .container {
     height: auto;
     text-align: center;
-  }
-  .image{
-    display: none;
-  }
+    justify-content: center;
+    .image {
+      display: none;
+    }
+    .item {
+      flex-direction: column;
+    }
+    .title {
+      font-size: 30px;
+    }
 
-  .item {
-    flex-direction: column;
-  }
-
-  .title {
-    font-size: 30px;
-  }
-
-  .text {
-    font-size: 20px;
+    p {
+      font-size: 20px;
+    }
   }
 }

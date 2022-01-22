@@ -3,6 +3,7 @@ import ProductList from "../src/components/product-list";
 import Slider from "../src/components/slider";
 import styles from "../styles/Home.module.css";
 
+
 export default function Home() {
   return (
     <div className={styles.container}>
