@@ -1,6 +1,6 @@
 ## Restaurant Website
 
-#### The purpose of this project is to practice React, Next.js, Material UI and responsive design.
+#### The purpose of this project is to practice React.js, Next.js, Material UI and responsive design.
 
 ![](images/image1.png)
 <br />
